@@ -35,7 +35,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
--Clone the git repo using this command: **git clone git@github.com:Dinma-Faith/Math_magicians.git**
+-Clone the git repo using this command: **git clone git@github.com:Dinma-Faith/BookStore.git**
 
 ### Install
 
