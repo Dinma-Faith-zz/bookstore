@@ -6,7 +6,6 @@
 
 - Major languages: HTML CSS & JavaScript
 - Frameworks(Library): React
-- Technologies used
 
 ## Live Demo
 
