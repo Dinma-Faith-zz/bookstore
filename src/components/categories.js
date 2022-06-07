@@ -4,7 +4,6 @@ import { checkStatusAction } from './redux/categories/categories';
 
 function Category() {
   const status = useSelector((state) => state.categories);
-  console.log(status)
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(checkStatusAction());
