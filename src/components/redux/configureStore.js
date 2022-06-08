@@ -1,10 +1,10 @@
 import { combineReducers, legacy_createStore as createStore } from 'redux';
-import books from './books/books';
+import booksReducer from './books/books';
 import categoryReducer from './categories/categories';
 
 const rootReducer = combineReducers({
   categories: categoryReducer,
-  books,
+  books: booksReducer,
 });
 
 const store = createStore(rootReducer);
