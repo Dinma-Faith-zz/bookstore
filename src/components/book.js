@@ -1,24 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBookAction } from './redux/books/books';
+import { removeBookAction } from '../redux/books/books';
 
-/* eslint-disable react/prop-types */
 const Book = (props) => {
-  const { book } = props;
+  const { title, author, id } = props;
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(removeBookAction(book.id));
+    dispatch(removeBookAction(id));
   };
   return (
     <div>
       <ul>
         <li>
-          {book.title }
+          {title }
           {' '}
           by
           {' '}
-          {book.author}
+          {author}
         </li>
       </ul>
       <button type="button" onClick={handleDelete}>
@@ -26,6 +26,12 @@ const Book = (props) => {
       </button>
     </div>
   );
+};
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Book;

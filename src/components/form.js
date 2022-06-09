@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBookAction } from './redux/books/books';
+import { addBookAction } from '../redux/books/books';
 
 function Form() {
   const dispatch = useDispatch();
@@ -17,14 +17,6 @@ function Form() {
       setstate({ title: '', author: '' });
     }
   };
-
-  // const onchange = (e) => {
-  //   setstate((state) => ({
-  //     ...state,
-  //     [e.target.name]: e.target.value,
-  //     id: uuidv4(),
-  //   }));
-  // };
 
   return (
     <form>

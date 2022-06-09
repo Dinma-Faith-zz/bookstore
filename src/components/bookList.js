@@ -8,7 +8,7 @@ const Books = () => {
   return (
     <div>
       <ul>
-        { books.length > 0 ? books.map((book) => (<Book key={book.id} book={book} />)) : ''}
+        { books.length > 0 ? books.map((book) => (<Book key={book.id} title={book.title} author={book.author} id={book.id} />)) : ''}
       </ul>
 
       <Form />
