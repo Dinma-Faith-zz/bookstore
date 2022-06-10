@@ -1,37 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBookAction } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
-  const { title, author, id } = props;
+  const {
+    title, author, id, category,
+  } = props;
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(removeBookAction(id));
+    dispatch(deleteBook(id));
   };
   return (
-    <div>
-      <ul>
-        <li>
+    <ul>
+      <li key={id}>
+        <p>
           {title }
           {' '}
           by
           {' '}
           {author}
-        </li>
-      </ul>
-      <button type="button" onClick={handleDelete}>
-        Delete
-      </button>
-    </div>
+          {' '}
+        </p>
+        <p>
+          {category}
+        </p>
+        <button type="button" onClick={handleDelete}>
+          Delete
+        </button>
+      </li>
+
+    </ul>
+
   );
 };
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
