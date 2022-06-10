@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBookAction } from '../redux/books/actionCreators';
+import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
   const {
@@ -10,7 +10,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(removeBookAction(id));
+    dispatch(deleteBook(id));
   };
   return (
     <ul>
@@ -18,12 +18,8 @@ const Book = (props) => {
         <p>
           {title }
           {' '}
-        </p>
-        <p>
           by
           {' '}
-        </p>
-        <p>
           {author}
           {' '}
         </p>

@@ -28,7 +28,7 @@ export default function booksReducer(state = bookArr, action) {
       };
 
     case REMOVE_BOOK:
-      return { state, books: state.books.filter((book) => book.id !== action.payLoad) };
+      return { ...state, books: state.books.filter((book) => book.id !== action.id) };
     default:
       return state;
   }
@@ -57,19 +57,6 @@ export const postBook = (books) => (dispatch) => {
       dispatch(addBookAction(books));
     });
 };
-
-// export const deleteBook = (id) => async (dispatch) => {
-//   await fetch(`${urlLink}/${id}`, {
-//     method: 'DELETE',
-//     body: JSON.stringify({
-//       item_id: id,
-//     }),
-//     headers: {
-//       'content-type': 'application/json; charset=UTF-8',
-//     },
-//   });
-//   dispatch(removeBook(id));
-// };
 
 export const deleteBook = (id) => (dispatch) => {
   fetch(`${urlApi}/${id}`, {

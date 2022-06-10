@@ -5,9 +5,9 @@ export const addBookAction = (book) => ({
   payLoad: book,
 });
 
-export const removeBookAction = (payLoad) => ({
+export const removeBookAction = (id) => ({
   type: REMOVE_BOOK,
-  payLoad,
+  payLoad: id,
 });
 
 export const loadingBookAction = () => ({
