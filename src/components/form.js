@@ -1,41 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBookAction } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 
 function Form() {
   const dispatch = useDispatch();
 
-  const [book, setstate] = useState({ title: '', author: '' });
-
-  const changeTitle = (event) => setstate({ ...book, title: event.target.value });
-  const changeAuthor = (event) => setstate({ ...book, author: event.target.value });
-  const onChange = () => {
-    if (book.title && book.author) {
-      book.id = uuidv4();
-      dispatch(addBookAction(book));
-      setstate({ title: '', author: '' });
-    }
+  const onChange = (e) => {
+    e.preventDefault();
+    const { title, author, category } = e.target.elements;
+    const newAddedBooks = {
+      title: title.value,
+      author: author.value,
+      category: category.value,
+      item_id: uuidv4(),
+    };
+    dispatch(postBook(newAddedBooks));
+    title.value = ''; author.value = ''; category.value = '';
   };
 
   return (
-    <form>
+    <form onSubmit={onChange}>
       <input
         type="text"
         placeholder="Book Title..."
-        value={book.title}
         name="title"
-        onChange={changeTitle}
       />
 
       <input
         type="text"
         placeholder="Author"
-        value={book.author}
         name="author"
-        onChange={changeAuthor}
       />
-      <button type="button" onClick={(e) => { e.preventDefault(); onChange(); }}>Add Book</button>
+
+      <input
+        type="text"
+        placeholder="Category"
+        name="category"
+      />
+      <button type="submit">Add Book</button>
 
     </form>
   );
