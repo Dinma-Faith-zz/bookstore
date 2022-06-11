@@ -25,19 +25,18 @@ const Book = (props) => {
         </p>
         <li key={id}>
           <p className="author-text">
-            {title }
-            {' '}
-            by
-            {' '}
-            {author}
-
-            {' '}
+            {title}
           </p>
-          <button type="button" className="text button">Comment</button>
-          <button type="button" className="text button" onClick={handleDelete}>
-            Delete
-          </button>
-          <button type="button" className="text button">Edit</button>
+          <p className="author-author">
+            {author}
+          </p>
+          <div className="button-text">
+            <button type="button" className="text button">Comment</button>
+            <button type="button" className="text button" onClick={handleDelete}>
+              Delete
+            </button>
+            <button type="button" className="text button">Edit</button>
+          </div>
         </li>
       </ul>
 

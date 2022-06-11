@@ -35,7 +35,7 @@ function Form() {
           type="text"
           placeholder="Author"
           name="author"
-          className="form-input"
+          className="form-input author"
         />
 
         <select name="category" className="form-input category" onChange={onChange} required>
