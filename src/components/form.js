@@ -20,27 +20,38 @@ function Form() {
   };
 
   return (
-    <form onSubmit={onChange}>
-      <input
-        type="text"
-        placeholder="Book Title..."
-        name="title"
-      />
+    <div className="form-div">
+      <hr />
+      <span className="form-title"> Add New Book</span>
+      <form onSubmit={onChange}>
+        <input
+          type="text"
+          placeholder="Book Title..."
+          name="title"
+          className="form-input book"
+        />
 
-      <input
-        type="text"
-        placeholder="Author"
-        name="author"
-      />
+        <input
+          type="text"
+          placeholder="Author"
+          name="author"
+          className="form-input"
+        />
 
-      <input
-        type="text"
-        placeholder="Category"
-        name="category"
-      />
-      <button type="submit">Add Book</button>
+        <select name="category" className="form-input category" onChange={onChange} required>
+          <option value="" hidden>
+            Category
+          </option>
+          <option value="Dramma">Dramma</option>
+          <option value="Documentary">Documentary</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Crime">Crime</option>
+          <option value="Romance">Romance</option>
+        </select>
+        <button className="btn" type="submit">Add Book</button>
 
-    </form>
+      </form>
+    </div>
   );
 }
 export default Form;

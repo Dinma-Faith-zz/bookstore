@@ -1,4 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+
+:root {
+  --main-acent-color: #0290ff;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: #fafafa;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Times New Roman', Times, serif;
+}
+
+.nav-header {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 4%;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.nav {
+  justify-content: space-between;
+  width: 85.9%;
+  height: 75px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.nav ul {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  padding: 10px 2rem 10px 0;
+}
+
+.user-profile-wrapper {
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 65%;
+}
+
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-acent-color);
+}
+
+.bk-nav {
+  color: #121212;
+}
+
+.cat-nav,
+.completed,
+.currChapter {
+  color: #888;
+}
+
+.books-list-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 80%;
+  margin-left: 6%;
+  margin-bottom: 2%;
+  padding: 1rem;
+  padding-right: 5.5%;
+  border: 1px solid gainsboro;
+}
+
+.books-list-section li {
+  list-style: none;
+}
+
+.secondCol {
+  display: flex;
+  padding-left: 20%;
+}
+
+.form-div {
+  width: 85.5%;
+  padding-inline: 6%;
+  padding-top: 5%;
+}
+
+.form-title {
+  font-size: x-large;
+  font-weight: bolder;
+  color: darkslategrey;
+}
+
+hr {
+  color: rgb(248, 245, 245);
+  margin-bottom: 5%;
+}
+
+.form-input {
+  padding: 1%;
+  margin-right: 3%;
+  margin-top: 4%;
+}
+
+.book {
+  width: 35%;
+}
+
+.category {
+  width: 21%;
+}
+
+.btn {
+  padding: 1%;
+  width: 18%;
+  background-color: var(--main-acent-color);
+  color: #fff;
+}
+
+.text {
+  color: var(--main-acent-color);
+}
+
+.text-category {
+  color: #888;
+}
+
+.button {
+  border: none;
+  margin: 1%;
+  padding: 3%;
+  font-size: small;
+  background-color: #fff;
+}
+
+.author-text {
+  font-weight: 700;
+}
+
+.percentageVal {
+  font-weight: 700;
+}
+
+.percent-li {
+  padding-left: 10%;
+}
+
+#chapter {
+  font-weight: 600;
+}
+
+.update-btn {
+  background-color: var(--main-acent-color);
+  color: #fff;
+  font-size: small;
+  border: none;
+  padding: 5%;
 }
