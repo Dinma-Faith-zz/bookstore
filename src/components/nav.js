@@ -8,8 +8,8 @@ function NavBar() {
       <nav className="nav">
         <ul className="links">
           <li><Link to="/"><h1 className="Bookstore-CMS">Bookstore CMS</h1></Link></li>
-          <li><Link to="/" className="bk-nav">Book</Link></li>
-          <li><Link to="/category" className="cat-nav">Category</Link></li>
+          <li><Link to="/" className="bk-nav">BOOKS</Link></li>
+          <li><Link to="/category" className="cat-nav">CATEGORIES</Link></li>
 
           <span className="user-profile-wrapper d_flex">
             <FaUserAlt style={{

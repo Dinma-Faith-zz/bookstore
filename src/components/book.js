@@ -31,18 +31,18 @@ const Book = (props) => {
             {author}
           </p>
           <div className="button-text">
-            <button type="button" className="text button">Comment</button>
-            <button type="button" className="text button" onClick={handleDelete}>
+            <button type="button" className="button border-line">Comment</button>
+            <button type="button" className="button border-line" onClick={handleDelete}>
               Delete
             </button>
-            <button type="button" className="text button">Edit</button>
+            <button type="button" className="button">Edit</button>
           </div>
         </li>
       </ul>
 
       <ul className="secondCol">
         <li>
-          <div style={{ width: 100, height: 100 }}>
+          <div className="circularbar">
             <CircularProgressbar value={Math.round((chapterVal / 20) * 100)} />
           </div>
         </li>

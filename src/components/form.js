@@ -22,11 +22,11 @@ function Form() {
   return (
     <div className="form-div">
       <hr />
-      <span className="form-title"> Add New Book</span>
+      <span className="form-title"> ADD NEW BOOK</span>
       <form onSubmit={onChange}>
         <input
           type="text"
-          placeholder="Book Title..."
+          placeholder="Book title..."
           name="title"
           className="form-input book"
         />
@@ -47,8 +47,9 @@ function Form() {
           <option value="Fiction">Fiction</option>
           <option value="Crime">Crime</option>
           <option value="Romance">Romance</option>
+          <option value="Comedy">Comedy</option>
         </select>
-        <button className="btn" type="submit">Add Book</button>
+        <button className="btn" type="submit">ADD BOOK</button>
 
       </form>
     </div>
