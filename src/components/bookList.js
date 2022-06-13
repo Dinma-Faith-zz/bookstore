@@ -14,19 +14,17 @@ const Books = () => {
   }, [dispatch]);
   return (
     <div>
-      <ul>
-        {newBooksArr.length > 0
-          ? newBooksArr.map((book) => (
-            <Book
-              key={book.item_id}
-              title={book.title}
-              author={book.author}
-              category={book.category}
-              id={book.item_id}
-            />
-          ))
-          : ''}
-      </ul>
+      {newBooksArr.length > 0
+        ? newBooksArr.map((book) => (
+          <Book
+            key={book.item_id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+            id={book.item_id}
+          />
+        ))
+        : 'Loading...'}
 
       <Form />
     </div>

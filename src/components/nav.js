@@ -1,13 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
 
 function NavBar() {
   return (
-    <header className="navigation">
-      <h1>Bookstore CMS</h1>
-      <nav className="nav-links">
-        <Link to="/">Book</Link>
-        <Link to="/category">Category</Link>
+    <header className="nav-header">
+      <nav className="nav">
+        <ul className="links">
+          <li><Link to="/"><h1 className="Bookstore-CMS">Bookstore CMS</h1></Link></li>
+          <li><Link to="/" className="bk-nav">BOOKS</Link></li>
+          <li><Link to="/category" className="cat-nav">CATEGORIES</Link></li>
+
+          <span className="user-profile-wrapper d_flex">
+            <FaUserAlt style={{
+              color: '#0290ff',
+              height: '15px',
+              cursor: 'pointer',
+              transition: 'all ease-in 300ms',
+            }}
+            />
+          </span>
+        </ul>
       </nav>
     </header>
   );
