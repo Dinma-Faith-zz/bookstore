@@ -267,12 +267,14 @@ button.button.border-line {
   font-size: 1rem;
   width: 4.5rem;
   color: #c4c4c4;
+  background-color: #fff;
 }
 
 [name~="category"] {
   color: #c4c4c4;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
+  background-color: #fff;
 }
 
 select option:hover {
